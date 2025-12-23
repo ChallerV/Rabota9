@@ -10,6 +10,11 @@ while current_name != "Левон":
 
     if current_name == "Левон" or current_name == "нет":
         break
+    
+    elif current_name == "":
+        people_between += 0
+        print("Следующего человека в очереди нету\n")
+    
     elif current_name == "Александра":
         print("Александра уже стоит в очереди (самая первая), её имя не может повторятся!\n")
         continue
@@ -17,5 +22,6 @@ while current_name != "Левон":
         people_between += 1
         past_name = current_name
         continue
+
 
 print(f"Количество людей между Александрой и Левоном = {people_between}")
