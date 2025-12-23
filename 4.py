@@ -67,3 +67,8 @@ print(sum_big_five)
 print(product_big_seven)
 
 print(zero_five_count)
+
+summa = three_count + last_digit_count + even_count + sum_big_five + product_big_seven + zero_five_count
+
+print(f"\nВсего суммарно встречалось: {summa}")
+
