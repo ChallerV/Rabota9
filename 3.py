@@ -1,6 +1,6 @@
-total_coins = 0  # Общее количество монет
-amount_left = 0  # Оставшаяся сумма
-current_amount = 0  # Текущая сумма для обработки
+total_coins = 0  
+amount_left = 0  
+current_amount = 0 
 
 current_amount = int(input("Введите сумму для оплаты ведьмаку: "))
 amount_left = current_amount
@@ -37,5 +37,6 @@ while amount_left > 0:
 
     # Вывод промежуточного состояния
     print(f"Текущий счётчик монет: {total_coins}, осталось оплатить: {amount_left}")
+
 
 print(f"\nИтог: минимальное количество монет = {total_coins}")
