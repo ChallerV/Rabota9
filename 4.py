@@ -1,30 +1,25 @@
-# Ввод числа
+
 num = int(input("Введите любое натуральное число: "))
 
-# Инициализация всех счётчиков
-three_count = 0 # количество цифр 3 в нём
-last_digit_count = 0 # сколько раз в нём встречается последняя цифра;
-even_count = 0 # количество чётных цифр;
-sum_big_five = 0 # сумма его цифр, больших пяти;
-product_big_seven = 1 # произведение цифр, больших семи
-zero_five_count = 0 # сколько раз в нём встречаются цифры 0 и 5
+three_count = 0 
+last_digit_count = 0 # 
+even_count = 0 
+sum_big_five = 0 
+product_big_seven = 1 
+zero_five_count = 0 
 
-# Получаем последнюю цифру
 last_d = num % 10
 
-# Создаём временную переменную для обработки
 work_num = num
 
 print(f"Последняя цифра: {last_d}")
 
-# Основной цикл с while-else
 digit_position = 1
 while work_num > 0:
     current_d = work_num % 10
 
     print(f"Позиция {digit_position}: цифра {current_d}")
 
-    # Анализ текущей цифры
     if current_d == 3:
         three_count += 1
 
@@ -43,16 +38,12 @@ while work_num > 0:
     if current_d == 0 or current_d == 5:
         zero_five_count += 1
 
-    # Подготовка к следующей итерации
     work_num //= 10
     digit_position += 1
 else:
-    # Этот блок выполнится после нормального завершения цикла
     print(f"Всего проанализировано {digit_position - 1} цифр")
 
-    # Проверка особого случая для произведения
     if product_big_seven == 1:
-        # Проверим, были ли цифры больше 7
         check_num = num
         gt7_found = False
         search_count = 0
@@ -68,11 +59,11 @@ else:
             product_big_seven = 1
             print("Цифр больше 7 не обнаружено")
 
-# Вывод результатов
 print("\nРезультаты:")
 print(three_count)
 print(last_digit_count)
 print(even_count)
 print(sum_big_five)
 print(product_big_seven)
+
 print(zero_five_count)
